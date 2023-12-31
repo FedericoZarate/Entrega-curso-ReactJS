@@ -1,9 +1,9 @@
 import React from "react";
-import ItemList from "./ItemList";
+import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = () => {
-  const { categoriaId } = useParams();
+const ItemDetailContainer = () => {
+  const { productoId } = useParams();
 
   const productos = [
     {
@@ -62,20 +62,14 @@ const ItemListContainer = () => {
 
   mostrarProductos.then((resultado) => {}).catch((error) => {});
 
-  const productosFiltrados = productos.filter(
-    (producto) => producto.categoria == categoriaId
-  );
-  console.log(productosFiltrados);
+  const productoFind = productos.find((producto) => producto.id == productoId);
+  console.log(productoFind);
 
   return (
     <div>
-      {categoriaId ? (
-        <ItemList productos={productosFiltrados} />
-      ) : (
-        <ItemList productos={productos} />
-      )}
+      <ItemDetail producto={productoFind} />;
     </div>
   );
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;
