@@ -8,3 +8,4 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 Agrego video de como se implementaron las rutas de nacegacion.
+![ezgif com-video-to-gif-converter](https://github.com/FedericoZarate/Entrega-curso-ReactJS/assets/126119001/eace2d94-c6a3-470a-bf72-7aed4ed1c943)
